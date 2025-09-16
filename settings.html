@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCEAN WATCH | Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/icon3.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="settings-container">
+    <div class="settings-box">
+      <h1>OCEAN WATCH</h1>
+      <h2>Customize Your Experience</h2>
+
+      <form action="/settings" method="POST">
+        <div class="setting-group">
+          <label for="emailNotifications">Email Notifications</label>
+          <label class="switch">
+            <input type="checkbox" name="emailNotifications" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <label for="smsAlerts">SMS Alerts</label>
+          <label class="switch">
+            <input type="checkbox" name="smsAlerts" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <p class="note">Thick-all tlpn observed spreading scsmss 500m wells</p>
+
+        <div class="setting-group">
+          <label for="language">Language Preference</label>
+          <select name="language" id="language">
+            <option value="english" selected>English</option>
+            <option value="hindi">Hindi</option>
+            <option value="tamil">Tamil</option>
+            <option value="marathi">Marathi</option>
+            <option value="gujarati">Gujarati</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label>Account Security</label>
+          <button type="button" onclick="alert('Redirecting to password change...')">Change Password</button>
+        </div>
+
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" name="dataSharing" checked />
+            Share crowdsourced data for research initiatives
+          </label>
+        </div>
+
+        <button type="submit" class="save-btn">Save Settings</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

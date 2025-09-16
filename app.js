@@ -36,7 +36,6 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'login.html'));
 });
 
-// Handle login form
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (username && password) {
@@ -46,27 +45,66 @@ app.post('/login', (req, res) => {
   }
 });
 
-// Handle registration
+// Register page
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, 'register.html'));
+});
+
 app.post('/register', (req, res) => {
-  const { username } = req.body;
-  if (username) {
+  const { username, email, password } = req.body;
+  if (username && email && password) {
     res.json({ message: `User ${username} registered successfully` });
   } else {
-    res.status(400).json({ error: 'Username required' });
+    res.status(400).json({ error: 'All fields are required' });
   }
 });
 
-// Handle contact form
+// Contact page
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'contact.html'));
+});
+
 app.post('/contact', (req, res) => {
   const { name } = req.body;
   if (name) {
     res.json({ message: `Thanks ${name}, we received your message.` });
   } else {
-    res.status(400).json({ error: 'Name required' });
+    res.status(400).json({ error: 'Name is required' });
   }
 });
 
-// Handle hazard report
+app.get('/settings', (req, res) => {
+  res.sendFile(path.join(__dirname, 'settings.html'));
+});
+
+app.post('/settings', (req, res) => {
+  const {
+    emailNotifications,
+    smsAlerts,
+    language = 'english',
+    dataSharing
+  } = req.body;
+
+  const parsedSettings = {
+    emailNotifications: emailNotifications === 'on',
+    smsAlerts: smsAlerts === 'on',
+    language,
+    dataSharing: dataSharing === 'on'
+  };
+
+  console.log('✅ Settings received:', parsedSettings);
+
+  res.json({
+    message: 'Settings updated successfully',
+    ...parsedSettings
+  });
+});
+
+
+
+
+
+// Hazard report
 app.post('/report-a-hazard', upload.single('file'), (req, res) => {
   const { location, description } = req.body;
   const photo = req.file ? req.file.filename : 'No photo';
@@ -83,7 +121,7 @@ app.post('/report-a-hazard', upload.single('file'), (req, res) => {
   });
 });
 
-// Serve analysis data
+// Analysis data
 app.get('/analysis', (req, res) => {
   res.json({
     liveReports: 27,
@@ -93,7 +131,7 @@ app.get('/analysis', (req, res) => {
   });
 });
 
-// Fetch mock reports
+// Mock reports
 app.get('/reports', (req, res) => {
   res.json([
     {

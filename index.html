@@ -22,6 +22,7 @@
 </head>
 <body>
   <div class="main">
+    <!-- Sidebar Navigation -->
     <div class="sidebar">
       <h2>Dashboard</h2>
       <div class="nav">
@@ -35,14 +36,15 @@
         </div>
         <div class="nav-option">
           <i class="fa-solid fa-gear"></i>
-          <a href="#">Settings</a>
+          <a href="/settings">Settings</a>
         </div>
       </div>
     </div>
 
+    <!-- Main Content -->
     <div class="main-content">
       <div class="logo">
-        <img src="./assets/icon3.jpg" />
+        <img src="./assets/icon3.jpg" alt="Ocean Watch Logo" />
         <h2>OCEAN WATCH</h2>
       </div>
 
@@ -51,12 +53,18 @@
         <form action="/report-a-hazard" method="POST" enctype="multipart/form-data">
           <div class="report-option">
             <h3>Location</h3>
-            <select name="location">
-              <option>Select</option>
-              <option>Mumbai</option>
-              <option>Chennai</option>
+            <select name="location" required>
+              <option value="">Select</option>
+              <option>Mumbai (Maharashtra)</option>
               <option>Goa</option>
-              <option>Visakhapatnam</option>
+              <option>Chennai (Tamil Nadu)</option>
+              <option>Visakhapatnam (Andhra Pradesh)</option>
+              <option>Kochi (Kerala)</option>
+              <option>Kolkata (West Bengal)</option>
+              <option>Paradip (Odisha)</option>
+              <option>Kandla (Gujarat)</option>
+              <option>Port Blair (Andaman & Nicobar)</option>
+              <option>Diu (Daman & Diu)</option>
             </select>
           </div>
           <div class="report-option">
@@ -66,6 +74,7 @@
               rows="10"
               cols="31"
               placeholder="Describe the hazard..."
+              required
             ></textarea>
           </div>
           <div class="report-option">
@@ -78,18 +87,19 @@
       </div>
     </div>
 
+    <!-- Footer Navigation -->
     <div class="contact-detail">
       <div class="detail">
         <i class="fa-solid fa-user"></i>
-        <a href="#">Login</a>
+        <a href="/login">Login</a>
       </div>
       <div class="detail">
         <i class="fa-brands fa-instagram"></i>
-        <a href="#">Register</a>
+        <a href="/register">Register</a>
       </div>
       <div class="detail">
         <i class="fa-solid fa-address-book"></i>
-        <a href="#">Contact Us</a>
+        <a href="/contact">Contact Us</a>
       </div>
     </div>
   </div>
