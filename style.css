@@ -1,0 +1,189 @@
+body {
+     font-family: "Montserrat", sans-serif;
+     margin: 0;
+     background-color: black;
+     color: white;
+     overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar {
+    background-color: rgb(31,41,55);
+    width: 340px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    overflow: auto;
+    border-radius: 1rem;
+    padding: 0 1.5rem 0 1.5rem;
+    background-image: url(./assets/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    color: rgb(20,184,166);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    height: 3rem;
+    width: 3rem;
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.contact-detail {
+    background-color: #000;
+    position: fixed;
+    border-radius: 1rem;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+    border-radius: 1px;
+}
+
+.sidebar h2 {
+    margin-left: 1rem;
+    opacity: 0.9;
+}
+
+.sidebar:hover {
+    box-shadow: 0px 0px 20px skyblue;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+    line-height: 40px;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+    background-color: rgb(15,23,36);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-content:hover {
+    box-shadow: 0px 0px 10px skyblue;
+}
+
+.report {
+    opacity: 0.9;
+    position: absolute;
+    align-self: center;
+    left: 1rem;
+    height: 530px;
+    width: 270px;
+    background-color: rgba(17,24,39);
+    border: none;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.report:hover {
+    border: 1px solid skyblue;
+    box-shadow: 0px 0px 10px skyblue;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.report-option {
+    opacity: 0.7;
+}
+
+.report-option:hover {
+    opacity: 1;
+}
+
+.report-option select {
+    height: 2rem;
+    width: 95%;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+.report-option textarea {
+    background-color: transparent;
+    color: white;
+}
+
+.report button {
+    height: 2.5rem;
+    width: 10rem;
+    background-color: rgb(20,184,166);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detail {
+    opacity: 0.7;
+    color: skyblue;
+}
+
+.detail:hover {
+    opacity: 1;
+}
+
+
+.btn-one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+}
