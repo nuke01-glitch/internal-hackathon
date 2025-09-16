@@ -12,6 +12,11 @@ body {
     padding: 0.5rem;
 }
 
+.dashboard-content-wrapper {
+    display: flex;
+    gap: 30px; /* Space between the two columns */
+    margin-top: 20px;
+}
 /* Style the select dropdown */
 select[name="location"] {
   background-color: #000;         /* Black background */
@@ -24,6 +29,20 @@ select[name="location"] {
   appearance: none;              /* Removes default arrow styling */
 }
 
+.report-section {
+    flex: 0 0 45%; /* Explicitly define width */
+    max-width: 45%;
+    padding: 20px;
+    background: #141c2b; /* Example background color for the form box */
+    border-radius: 10px;
+}
+#map {
+    height: 400px !important; /* Set the desired height for the map */
+    width: 100%; /* Take full width of the right panel */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 0; /* Remove the old margin since it's now in the new structure */
+}
 /* Style the dropdown options */
 select[name="location"] option {
   background-color: #000;         /* Black background for options */

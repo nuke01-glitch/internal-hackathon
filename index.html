@@ -41,52 +41,62 @@
       </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="logo">
-        <img src="./assets/icon3.jpg" alt="Ocean Watch Logo" />
-        <h2>OCEAN WATCH</h2>
-      </div>
+<div class="main-content">
+  <div class="logo">
+    <img src="./assets/icon3.jpg" alt="Ocean Watch Logo" />
+    <h2>OCEAN WATCH</h2>
+  </div>
 
-      <div class="report">
-        <h2>Report a Hazard</h2>
-        <form action="/report-a-hazard" method="POST" enctype="multipart/form-data">
-          <div class="report-option">
-            <h3>Location</h3>
-            <select name="location" required>
-              <option value="">Select</option>
-              <option>Mumbai (Maharashtra)</option>
-              <option>Goa</option>
-              <option>Chennai (Tamil Nadu)</option>
-              <option>Visakhapatnam (Andhra Pradesh)</option>
-              <option>Kochi (Kerala)</option>
-              <option>Kolkata (West Bengal)</option>
-              <option>Paradip (Odisha)</option>
-              <option>Kandla (Gujarat)</option>
-              <option>Port Blair (Andaman & Nicobar)</option>
-              <option>Diu (Daman & Diu)</option>
-            </select>
-          </div>
-          <div class="report-option">
-            <h3>Description</h3>
-            <textarea
-              name="description"
-              rows="10"
-              cols="31"
-              placeholder="Describe the hazard..."
-              required
-            ></textarea>
-          </div>
-          <div class="report-option">
-            <h3>Photo</h3>
-            <input type="file" name="file" />
-          </div>
-          <br />
-          <button type="submit">Submit Report</button>
-        </form>
-      </div>
+  <div class="dashboard-content-wrapper">
+    <div class="report-section">
+      <h2>Report a Hazard</h2>
+      <form action="/report-a-hazard" method="POST" enctype="multipart/form-data">
+        <div class="report-option">
+          <h3>Location</h3>
+          <select name="location" required>
+            <option value="">Select</option>
+            <option>Mumbai (Maharashtra)</option>
+            <option>Goa</option>
+            <option>Chennai (Tamil Nadu)</option>
+            <option>Visakhapatnam (Andhra Pradesh)</option>
+            <option>Kochi (Kerala)</option>
+            <option>Kolkata (West Bengal)</option>
+            <option>Paradip (Odisha)</option>
+            <option>Kandla (Gujarat)</option>
+            <option>Port Blair (Andaman & Nicobar)</option>
+            <option>Diu (Daman & Diu)</option>
+          </select>
+          <button type="button" id="getLocation">📍 Use My Location</button>
+          <input type="hidden" name="latitude" id="latitude">
+          <input type="hidden" name="longitude" id="longitude">
+        </div>
+        <div class="report-option">
+          <h3>Description</h3>
+          <textarea
+            name="description"
+            rows="10"
+            cols="31"
+            placeholder="Describe the hazard..."
+            required
+          ></textarea>
+        </div>
+        <div class="report-option">
+          <h3>Photo</h3>
+          <input type="file" name="file" />
+        </div>
+        <br />
+        <button type="submit">Submit Report</button>
+      </form>
     </div>
-
+    <div class="dashboard-right-panel">
+      <div class="dashboard-summary">
+        <h3>Integrated Platform Summary</h3>
+        </div>
+      
+      <div id="map"></div>
+    </div>
+    </div>
+</div>
     <!-- Footer Navigation -->
     <div class="contact-detail">
       <div class="detail">
@@ -102,6 +112,12 @@
         <a href="/contact">Contact Us</a>
       </div>
     </div>
-  </div>
+  </div><!-- Leaflet CSS + JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Your geotagging script -->
+<script src="geotagging.js"></script>
+
 </body>
 </html>
