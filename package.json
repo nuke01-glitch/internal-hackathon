@@ -19,6 +19,7 @@
   "homepage": "https://github.com/prashilverma/Project#readme",
   "dependencies": {
     "express": "^5.1.0",
+    "mongoose": "^8.18.1",
     "multer": "^2.0.2"
   }
 }
