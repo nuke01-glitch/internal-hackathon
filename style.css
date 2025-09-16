@@ -12,6 +12,25 @@ body {
     padding: 0.5rem;
 }
 
+/* Style the select dropdown */
+select[name="location"] {
+  background-color: #000;         /* Black background */
+  color: #fff;                    /* White text */
+  border: 1px solid #fff;         /* White border */
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
+  appearance: none;              /* Removes default arrow styling */
+}
+
+/* Style the dropdown options */
+select[name="location"] option {
+  background-color: #000;         /* Black background for options */
+  color: #fff;                    /* White text for options */
+}
+
+
 .sidebar {
     background-color: rgb(31,41,55);
     width: 340px;
@@ -33,6 +52,77 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./assets/ocean.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(6px);
+}
+
+
+.login-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #00ffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #111;
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #00cccc;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 
 .logo {
     display: flex;
